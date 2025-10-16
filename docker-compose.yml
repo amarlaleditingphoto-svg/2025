@@ -1,0 +1,12 @@
+
+version: '3.8'
+services:
+  backend:
+    build: ./backend
+    ports:
+      - "4000:4000"
+    volumes:
+      - ./backend/uploads:/usr/src/app/uploads
+  # Optional ffmpeg service placeholder if you want a dedicated image
+  # ffmpeg:
+  #   image: jrottenberg/ffmpeg:4.3-alpine
